@@ -1,5 +1,14 @@
 # Blox
 
+Login page: </br>
+![image](https://github.com/seanhung07/BloxApp/blob/master/screenshots/1.png)
+Trading page: </br>
+![image](https://github.com/seanhung07/BloxApp/blob/master/screenshots/2.png)
+News page: </br>
+![image](https://github.com/seanhung07/BloxApp/blob/master/screenshots/3.png)
+Wallets page: </br>
+![image](https://github.com/seanhung07/BloxApp/blob/master/screenshots/4.png)
+
 ## Getting Started
 
 The best way to prepare this application for development is by running the following commands:
