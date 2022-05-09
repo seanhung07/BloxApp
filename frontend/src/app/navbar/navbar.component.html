@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand px-5" href="#">
+      <img src="../../assets/logo.svg" width="130" height="100" alt="">
+    </a>
+    <button class="navbar-toggler" type="button"  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse justify-content-end px-5" #navbarSupportedContent id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <!-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> -->
+          <a class="nav-link" href="/trade">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/trade">Trading</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/leaderboard">Leaderboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/news">News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/wallets">Wallets</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/account">Settings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click) = "onLogout()" routerLink="/login">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

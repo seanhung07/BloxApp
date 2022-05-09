@@ -1,0 +1,23 @@
+<a routerLink="/wallets" class="m-4">
+  <button class="btn btn-success">‹ All Wallets</button>
+</a>
+<div class="d-flex justify-content-center flex-column align-items-center m-4">
+  <div *ngIf="walletData === undefined">
+    <h1 class="mb-4">Loading...</h1>
+  </div>
+  <div *ngIf="walletData !== undefined">
+    <h1 class="mb-4">
+      {{walletData.name ? walletData.name : "Unnamed Wallet"}}
+    </h1>
+    <div class="p-3 card m-3" style="width: 75%;">
+      <h3>Edit Wallet</h3>
+      <label for="name">Name</label>
+      <input id="name" #name class="form-control" type="text" [value]="walletData.name">
+      <div *ngFor="let balance of walletData.balances | keyvalue">
+        <label for="balance">{{balance.key}} Balance</label>
+        <input id="balance" #balance class="form-control" type="number" [attr.currency]="balance.key" [value]="balance.value">
+      </div>
+      <button class="btn btn-success m-3" (click)="updateWallet()">Update</button>
+    </div>
+  </div>
+</div>

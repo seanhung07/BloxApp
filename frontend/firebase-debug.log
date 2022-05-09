@@ -1,0 +1,50 @@
+[debug] [2022-04-23T21:13:03.479Z] ----------------------------------------------------------------------
+[debug] [2022-04-23T21:13:03.480Z] Command:       /opt/homebrew/Cellar/node/17.8.0/bin/node /opt/homebrew/bin/firebase login:ci --no-localhost
+[debug] [2022-04-23T21:13:03.480Z] CLI Version:   10.7.1
+[debug] [2022-04-23T21:13:03.480Z] Platform:      darwin
+[debug] [2022-04-23T21:13:03.480Z] Node Version:  v17.8.0
+[debug] [2022-04-23T21:13:03.481Z] Time:          Sat Apr 23 2022 17:13:03 GMT-0400 (Eastern Daylight Time)
+[debug] [2022-04-23T21:13:03.481Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-04-23T21:13:03.520Z] >>> [apiv2][query] POST https://auth.firebase.tools/attest [none]
+[debug] [2022-04-23T21:13:03.520Z] >>> [apiv2][body] POST https://auth.firebase.tools/attest {"session_id":"2fbf6170-2b03-48ec-a0e6-d250a553c6c0"}
+[debug] [2022-04-23T21:13:03.757Z] <<< [apiv2][status] POST https://auth.firebase.tools/attest 200
+[debug] [2022-04-23T21:13:03.757Z] <<< [apiv2][body] POST https://auth.firebase.tools/attest {"token":"RhLRfu_jTwh3xpLzvcAwwTi7ZQY1HDPhwBQ0jH4213U"}
+[info] 
+[info] To sign in to the Firebase CLI:
+[info] 
+[info] 1. Take note of your session ID:
+[info] 
+[info]    2FBF6
+[info] 
+[info] 2. Visit the URL below on any device and follow the instructions to get your code:
+[info] 
+[info]    https://auth.firebase.tools/login?code_challenge=vhKMva1O9w0ASIjAkBNS9KD9z3hQoGgZkNsuC2KKBlY&session=2fbf6170-2b03-48ec-a0e6-d250a553c6c0&attest=RhLRfu_jTwh3xpLzvcAwwTi7ZQY1HDPhwBQ0jH4213U
+[info] 
+[info] 3. Paste or enter the authorization code below once you have it:
+[info] 
+[debug] [2022-04-23T22:43:06.315Z] ----------------------------------------------------------------------
+[debug] [2022-04-23T22:43:06.315Z] Command:       /opt/homebrew/Cellar/node/17.8.0/bin/node /opt/homebrew/bin/firebase login:ci --no-localhost
+[debug] [2022-04-23T22:43:06.316Z] CLI Version:   10.7.1
+[debug] [2022-04-23T22:43:06.316Z] Platform:      darwin
+[debug] [2022-04-23T22:43:06.316Z] Node Version:  v17.8.0
+[debug] [2022-04-23T22:43:06.316Z] Time:          Sat Apr 23 2022 18:43:06 GMT-0400 (Eastern Daylight Time)
+[debug] [2022-04-23T22:43:06.316Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-04-23T22:43:06.346Z] >>> [apiv2][query] POST https://auth.firebase.tools/attest [none]
+[debug] [2022-04-23T22:43:06.346Z] >>> [apiv2][body] POST https://auth.firebase.tools/attest {"session_id":"5695cfd5-f4c0-4803-9847-d0fdabafc6e4"}
+[debug] [2022-04-23T22:43:06.637Z] <<< [apiv2][status] POST https://auth.firebase.tools/attest 200
+[debug] [2022-04-23T22:43:06.637Z] <<< [apiv2][body] POST https://auth.firebase.tools/attest {"token":"2DQO4SigBzvI6WfeD7OePDyGlTWpRkEtBqy1cbJu8Kk"}
+[info] 
+[info] To sign in to the Firebase CLI:
+[info] 
+[info] 1. Take note of your session ID:
+[info] 
+[info]    5695C
+[info] 
+[info] 2. Visit the URL below on any device and follow the instructions to get your code:
+[info] 
+[info]    https://auth.firebase.tools/login?code_challenge=thFopntdCWPcWTgB53iYKCcNbW61S5yOGgUbGnIEjyA&session=5695cfd5-f4c0-4803-9847-d0fdabafc6e4&attest=2DQO4SigBzvI6WfeD7OePDyGlTWpRkEtBqy1cbJu8Kk
+[info] 
+[info] 3. Paste or enter the authorization code below once you have it:
+[info] 

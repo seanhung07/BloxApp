@@ -1,0 +1,21 @@
+<div class="d-flex justify-content-center flex-column align-items-center m-4">
+  <h1 class="mb-4">Your Wallets</h1>
+  <div class="p-3 card m-3" style="width: 75%;">
+    <h3>Create new Wallet</h3>
+    <label for="name">Name</label>
+    <input id="name" #name class="form-control" type="text">
+    <label for="balance">Starting Balance</label>
+    <input id="balance" #balance class="form-control" type="number">
+    <button class="btn btn-success m-3" (click)="createWallet()">Create</button>
+  </div>
+  <h3>Existing Wallets</h3>
+  <div style="width: 75%;">
+    <a class="nav-link" routerLink="./{{wallet.address}}" *ngFor="let wallet of wallets">
+      <div class="p-3 card" style="width: 100%;" >
+        <b>{{wallet.name || "Unnamed Wallet"}}</b>
+        <p>Address: {{wallet.address}}</p>
+      </div>
+    </a>
+  </div>
+  
+</div>

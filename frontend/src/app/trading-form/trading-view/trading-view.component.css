@@ -1,0 +1,22 @@
+.tradingview-widget-container{
+  margin: 5px;
+  padding: 4px;
+}
+
+.btn{
+  color: #58bb44;
+  border: 1px solid #58bb44;
+}
+.btn:hover{
+  background-color: #58bb44;
+  color: #fff;
+  border: 1px solid #58bb44;
+}
+#symbolSearch input[type=search]:focus, #tradeForm select:focus{
+  outline: none;
+  box-shadow: 0 0 0 2px #58bb44;
+}
+#tradingViewWidget{
+  height:400px;
+  width: 90%;
+}

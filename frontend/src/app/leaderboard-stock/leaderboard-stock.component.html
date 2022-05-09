@@ -1,0 +1,17 @@
+<p>leaderboard-stock works!</p>
+<div #scoreTable class="m-3 text-center">
+   <h2>Scoreboard</h2>
+   <!--Table Beginning-->
+   <div class="row">
+     <div class="col"><b>Rank</b></div>
+     <div class="col"><b>Person</b></div>
+     <div class="col"><b>Portfolio Market Value</b></div>
+   </div>
+ 
+   <div class="row" *ngFor="let leaderboard of leaderboard; let i = index">
+       <div class="col">{{i + 1}}</div>
+       <div class="col">{{leaderboard[0]}}</div>
+       <div class="col">{{leaderboard[1]}}</div>
+   </div>
+   <!--Use TypeScript to show the rest?-->
+ </div>

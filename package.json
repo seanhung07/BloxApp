@@ -1,0 +1,23 @@
+{
+  "name": "stoxapp",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "cd frontend && npm i && npm run build && cd ../backend && npm i && npm run build",
+    "dev": "npx concurrently \"cd backend && mkdir -p ../dist/backend && cp -r node_modules ../dist/backend/node_modules && cp firebase-priv-key.json ../dist/backend/firebase-priv-key.json && npm run watch\" \"cd frontend && npm run watch\"",
+    "prod": "node dist/backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Web-Science-Systems-Development-Group/StoxApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Web-Science-Systems-Development-Group/StoxApp/issues"
+  },
+  "homepage": "https://github.com/Web-Science-Systems-Development-Group/StoxApp#readme",
+  "dependencies": {
+    "angular-tradingview-widget": "^0.1.1",
+    "mongodb": "^4.4.1"
+  }
+}

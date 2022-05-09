@@ -1,0 +1,23 @@
+/* keep footer on bottom */
+#wrap {
+    min-height: 70vh;
+} 
+
+.col-md-6 {
+    margin-bottom: 7px;
+}
+
+.bi {
+    cursor: pointer;
+}
+
+/* styling for buttons */
+.custom {
+    background-color: #58bb44;
+    color: #fff;
+    font-weight: 400;
+  }
+
+.custom:hover{
+    background-color: #4e8244;
+}

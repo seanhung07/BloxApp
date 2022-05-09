@@ -1,0 +1,18 @@
+<div class="d-flex justify-content-center flex-column align-items-center m-4">
+    <h1 class="mb-4">News</h1>
+    <h5 style="text-align: center;"> Stay up to date on the latest cryptocurrency news.</h5>
+    <div *ngIf="!newsList">
+      <h2>Loading...</h2>
+    </div>
+    <div *ngIf="newsList">
+      <div class="card" style="width: 90%; margin: 0 auto; float: none;" *ngFor="let news of newsList">
+          <img class="card-img-top" src="{{news.urlToImage}}" alt="News card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{news.title}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{news.author}}</h6>
+            <p class="card-text">{{news.description}}</p>
+            <a href="{{news.url}}" class="card-link">{{news.url}}</a>
+          </div>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="mt-2">
+  
+  <div id="symbolSearch" class="input-group">
+    <input type="search" class="form-control rounded" 
+      placeholder="Search Cryptocurrency Symbol" 
+      aria-label="Search" aria-describedby="search-addon" 
+      [formControl]="currency" (keyup.enter)="onSubmitTrade()"
+    />
+    <button type="button" class="btn btn-outline-primary"
+      (click)="onSubmitTrade()"
+    >
+      search
+    </button>
+  </div>
+
+  <!-- TradingView Widget BEGIN -->
+  <div class="tradingview-widget-container d-flex justify-content-center">
+    <div class="tradingview-widget-container__widget"></div>
+    <div #tradingview id="tradingViewWidget"></div>
+  </div>
+  <!-- TradingView Widget END -->
+</div>

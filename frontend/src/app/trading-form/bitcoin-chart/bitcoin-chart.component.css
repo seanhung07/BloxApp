@@ -1,0 +1,8 @@
+.tradingview-widget-container{
+  margin: 5px;
+  padding: 4px;
+}
+#bcChart{
+  height:400px;
+  width: 100%;
+}

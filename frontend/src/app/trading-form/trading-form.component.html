@@ -1,0 +1,66 @@
+<head>
+  <title>Trading Form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="trading-form.component.css">
+</head>
+<body class="row pb-2" style="overflow-x:hidden;">
+  
+
+  <div class="row">
+    <h1 id="tradeHeader" class="m-4 display-4" style="color: black;">Trading</h1>
+    <div class="col-md-6">
+      <form #tradingForm [formGroup]="tradeForm" (submit)="tradeSubmit()" >
+        <div id="tradeForm" class="form-group justify-content-center">
+  
+          <label for="wallet">Wallet</label>
+          <select class="form-select" id="wallet" #wallet
+            formControlName="walletAddress"
+          >
+            <option
+              *ngFor="let wallet of wallets"
+              value={{wallet.address}}>
+              {{wallet.name || wallet.address}}
+            </option>
+          </select>
+          <br>
+  
+          <label for="currencySymbol">Cryptocurrency</label>
+          <select #currencySymbol id="currencySymbol"
+            class="form-select" formControlName="toTradeSymbol"
+          >
+            <option
+              *ngFor="let ticker of crypto"
+              value={{ticker.ticker}}>{{ticker.ticker}}
+            </option>
+          </select>
+          <br>
+  
+          <label for="action">Buy or Sell?</label><br>
+          <select class="form-select" id="action" #action
+            formControlName="action"
+          >
+            <option value="buy">Buy</option>
+            <option value="sell">Sell</option>
+          </select><br>
+  
+          <label for="quantity">Quantity</label>
+          <input  #amount formControlName="quantity"
+            type="number" class="form-control" id="quantity"
+            placeholder="Enter amount wanted"
+            [disabled]="tradeForm.value.quantity <= 0"
+          /><br>
+  
+          <button type="submit" id="submit-trade" class="btn w-100 justify-content-center">Submit Trade</button>
+        </div>
+  
+      </form>
+    </div>
+    
+    <div class="col-md-6 wd-50 mt-2">
+      <app-trading-view></app-trading-view>
+    </div>
+  </div>
+  <app-bitcoin-chart></app-bitcoin-chart>
+</body>

@@ -1,0 +1,47 @@
+*{
+  overflow-x: hidden;
+}
+
+#submit-trade{
+  background-color: #58bb44;
+  color: #fff;
+  font-weight: 400;
+}
+#submit-trade:hover{
+  background-color: #4e8244;
+}
+#tradeForm{
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 25px;
+}
+input, select{
+  margin-bottom: 10px;
+}
+label{
+  font-weight: bold;
+}
+body{
+  background-color: #e2e2e2;
+  padding: 0;
+  margin: 0;
+}
+.tradingview-widget-container{
+  margin-top: 20px;
+}
+.tradingview-widget-container div{
+  padding: 0;
+}
+#tradeHeader{
+  text-shadow: #58bb44 5px 5px;
+  font-weight: bold;
+  text-align: center;
+}
+form{
+  padding-left: 20px;
+}
+#tradeForm input[type=text]:focus, #tradeForm input[type=number]:focus, #tradeForm select:focus{
+  outline: none;
+  box-shadow: 0 0 0 2px #58bb44;
+}

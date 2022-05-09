@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+   <link rel="stylesheet" href="leaderboard.component.css">
+</head>
+<div id="container" class="justify-content-center">
+  <h1>Leaderboard</h1>
+  <br/>
+  <div *ngIf="loading">
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <label>Loading Leaderboard...</label>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+  </div>
+    <div *ngIf="!loading">
+    <div id="slider" class="row">
+      <p>
+        <label>Filter balances less then {{ filterMaxBalanceFormatted }}</label>
+      </p>
+      <div class="slidecontainer">
+        <input type="range" [min]="minBalance" [max]="maxBalance" [value]="filterMaxBalance" class="slider" id="maxBal" (change)="changeFilterMaxBalance(max_balance.value)"  #max_balance>
+      </div>
+
+      <p>
+        <label>Filter balances greater then {{ filterMinBalanceFormatted }}</label>
+      </p>
+      <div class="slidecontainer">
+        <input type="range" [min]="minBalance" [max]="maxBalance" [value]="filterMinBalance"  class="slider" id="minBal" (change)="changeFilterMinBalance(min_balance.value)"  #min_balance>
+      </div>
+
+      <p>
+        <label>Rank top {{ filterTopRank }} balances</label>
+      </p>
+      <div class="slidecontainer">
+        <input type="range" [min]="1" [max]="maxRank" [value]="filterTopRank"  class="slider" id="topRank" (change)="changeFilterTopRank(top_rank.value)" #top_rank>
+      </div>
+
+
+   </div>
+   <br/>
+   <button (click)="refreshList()" class="btn custom">Refresh</button>
+   <br/>
+   <br/>
+
+    <!-- when one or more items found, show in table -->
+    <table class="table" *ngIf="balance_items.length">
+        <thead >
+            <th [class]="rankDirection" (click)="changeRankDirection()">Rank&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th >First Name</th>
+            <th>Last Name</th>
+            <th>Balance</th>
+        </thead>
+
+        <br>
+        <tr *ngFor="let item of balance_items">
+           <td *ngIf="item.rank <= filterTopRank">{{item.rank}}</td>
+           <td *ngIf="item.rank <= filterTopRank">{{item.firstName}}</td>
+           <td *ngIf="item.rank <= filterTopRank">{{item.lastName}}</td>
+           <td *ngIf="item.rank <= filterTopRank" style="text-align: right;">{{item.formattedBalance}}</td>
+        </tr>
+    </table>
+
+    <!-- when no items found, so empty table with message -->
+    <div *ngIf="!balance_items.length && !loading">
+    <table class="table">
+      <thead >
+            <th [class]="rankDirection" (click)="changeRankDirection()">Rank&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th >First Name</th>
+            <th>Last Name</th>
+            <th>Balance</th>
+        </thead>
+        <tr><td colspan="4">No Records Found</td></tr>
+      </table>
+    </div>
+  </div>
+</div>
